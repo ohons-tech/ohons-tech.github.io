@@ -19,9 +19,23 @@
         border: 2px solid transparent;
         transition: all .3s;
         @include df(center, center, column, 10px);
+        img {
+          width: auto;
+          filter:hue-rotate(180deg);
+        }
         &:hover {
           border: 2px solid var(--special-link);
           transform: scale(1.05);
+        }
+      }
+      .more {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+        border: 2px solid var(--medium);
+        &:hover {
+          border-color: purple;
+          color: purple;
         }
       }
     }

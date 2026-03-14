@@ -9,38 +9,50 @@
   <link rel="stylesheet" href="./scss/css/main.css"/>
 </head>
 <body>
-<div class="loader">
-  
+<div class="loader active">
+  <div class="loader__content">
+    <div class="window">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <div class="word">
+      <span class="letter">O</span><span class="letter">h</span><span class="letter">o</span><span class="letter">n</span><span class="letter">s</span>
+    </div>
+    <div class="word">
+      <span class="letter">t</span><span class="letter">e</span><span class="letter">c</span><span class="letter">h</span>
+    </div>
+  </div>
 </div>
 <header>
-  <span class="logo">
-    <span>Ohons Tech</span>
-  </span>
-
-  <input type="checkbox" id="checkbox"/>
-  <label for="checkbox" class="overlay"></label>
-  <label for="checkbox" class="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </label>
-
-  <nav>
-    <label for="checkbox">
+  <div class="content">
+    <span class="logo">
+      <span>Ohons Tech</span>
+    </span>
+  
+    <input type="checkbox" id="checkbox"/>
+    <label for="checkbox" class="overlay"></label>
+    <label for="checkbox" class="hamburger">
+      <span></span>
       <span></span>
       <span></span>
     </label>
-    <ul>
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Gallery</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-
-    <button class="theme">
-      <i class="fa fa-adjust"></i>
-    </button>
-  </nav>
+  
+    <nav>
+      <label for="checkbox">
+        <span></span>
+        <span></span>
+      </label>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+  
+      <button class="theme" title="Toggle theme">
+        <i class="fa fa-adjust"></i>
+      </button>
+    </nav>
+  </div>
 </header>
 
 <main>
@@ -244,9 +256,11 @@
   </div>
 </footer>
 
+
 <!-- TEMPLATES -->
 <template id="service-template">
   <div class="service">
+    <img src="./assets/svgs/frameless.svg" alt="img">
     <div class="heading">
       <h3>Sliding windows</h3>
     </div>
@@ -256,6 +270,7 @@
   </div>
 </template>
 
+<script type="module" src="./scripts/loader.js"></script>
 <script type="module" src="./scripts/fetch.js"></script>
 
 </body>

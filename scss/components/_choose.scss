@@ -2,7 +2,7 @@
 
 .choose {
   padding: 50px var(--side-p);
-  @include df(normal, center, row wrap, 25px);
+  @include df(center, center, row wrap, 25px);
   >* {
     flex: 1;
   }

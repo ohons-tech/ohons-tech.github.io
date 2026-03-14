@@ -9,7 +9,12 @@ header {
   background: var(--bg);
   border-bottom: 1px solid var(--medium);
   padding: 10px var(--side-p);
-  @include df(space-between, center,  row, 10px);
+  @include df(center, center);
+  .content {
+    width: 100%;
+    @include df(space-between, center,  row, 10px);
+    max-width: var(--max-w);
+  }
 
   .logo {
     font-weight: 700;
@@ -106,6 +111,39 @@ header {
     }
     ~ .overlay {
       transform: translateY(0);
+    }
+  }
+
+  @media (min-width: $tab) {
+    .hamburger,.overlay {
+      display: none;
+    }
+    nav {
+      padding: 0;
+      position: static;
+      transform: translateY(0);
+      background: var(--bg);
+      color: var(--text);
+      @include df(right, normal, row, 20px);
+      label {
+        display: none;
+      }
+      ul {
+        @include df(right, center, row, 20px);
+        li {
+          a {
+            text-transform: capitalize;
+          }
+          &:last-of-type {
+            a {
+              @include btn;
+            }
+          }
+        }
+      }
+      .theme {
+        @include btn;
+      }
     }
   }
 }

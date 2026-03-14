@@ -3,8 +3,8 @@
 .about {
   margin-top: 100px;
   padding: 20px var(--side-p);
-  min-height: 100dvh;
-  @include df(normal, normal, column, 20px);
+  min-height: 60dvh;
+  @include df(center, center, column, 20px);
   &__content {
     @include df(normal, start, column, 20px);
     a {

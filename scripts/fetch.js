@@ -16,10 +16,16 @@ function start() {
   
     data.forEach(el => {
       let clone = document.importNode(template, true);
+      clone.querySelector('img').src = el.svg;
       clone.querySelector('.heading h3').textContent = el.title;
       clone.querySelector('p').textContent = el.content;
   
       grid.appendChild(clone);
     });
+    let seeMore = document.createElement('a');
+    seeMore.href = "#";
+    seeMore.textContent = "And More...";
+    seeMore.classList.add('more');
+    grid.appendChild(seeMore);
   }
 }
