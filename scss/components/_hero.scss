@@ -19,8 +19,8 @@
     position: absolute;
     z-index: 1;
     bottom: 0;
-    margin-right: var(--side-p);
-    margin-left: var(--side-p);
+    right: var(--side-p);
+    left: var(--side-p);
     padding: 20px var(--side-p);
     margin-top: 200px;
     transform: translateY(20%);
