@@ -454,15 +454,31 @@ header .logo {
   text-transform: uppercase;
   color: var(--text);
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row;
+  gap: 10px;
+}
+header .logo__img {
+  width: 40px;
+  height: 40px;
+}
+header .logo__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+header .logo__text {
+  display: flex;
   justify-content: normal;
   align-items: start;
   flex-flow: column;
   gap: 0;
 }
-header .logo span {
+header .logo__text span {
   font-size: 1.2rem;
 }
-header .logo span:nth-of-type(2) {
+header .logo__text span:nth-of-type(2) {
   font-size: 14px;
   font-weight: 400;
 }
@@ -733,9 +749,11 @@ header #checkbox:checked ~ .overlay {
 .hero__content .logo h1 {
   text-transform: uppercase;
 }
-.hero__content .logo h2 {
-  font-size: 1.2rem;
-  text-transform: capitalize;
+.hero__content .logo h1 .focus {
+  -webkit-text-stroke: 2px var(--text);
+}
+.hero__content .logo p {
+  font-size: 18px;
 }
 .hero__content .links {
   display: flex;
@@ -948,6 +966,9 @@ header #checkbox:checked ~ .overlay {
   flex-flow: column;
   gap: 20px;
 }
+.about__content p {
+  line-height: 1.5;
+}
 .about__content button {
   cursor: pointer;
   color: var(--text);
@@ -1054,6 +1075,17 @@ header #checkbox:checked ~ .overlay {
   align-items: center;
   flex-flow: column;
   gap: 50px;
+}
+.home-services__heading {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 15px;
+}
+.home-services__heading p {
+  line-height: 1.5;
 }
 .home-services__img {
   width: 100%;
@@ -1214,6 +1246,13 @@ header #checkbox:checked ~ .overlay {
   color: var(--bg);
   min-height: 60dvh;
   padding: 20px var(--side-p);
+}
+@media (max-width: 500px) {
+  .services-hero {
+    min-height: 70dvh;
+  }
+}
+.services-hero {
   display: flex;
   justify-content: center;
   align-items: center;
