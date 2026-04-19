@@ -1503,7 +1503,7 @@ header #checkbox:checked ~ .overlay {
 }
 @media (max-width: 500px) {
   .services-hero {
-    min-height: 70dvh;
+    min-height: 75dvh;
   }
 }
 .services-hero {
@@ -1543,7 +1543,7 @@ header #checkbox:checked ~ .overlay {
 }
 .services-hero__content p {
   margin: 0;
-  font-size: 0.95rem;
+  line-height: 1.6;
 }
 .services-hero__content a {
   cursor: pointer;
@@ -1663,6 +1663,11 @@ header #checkbox:checked ~ .overlay {
   min-height: 60dvh;
   background: var(--text);
   color: var(--bg);
+}
+@media (max-width: 500px) {
+  .gallery-hero {
+    min-height: 75dvh;
+  }
 }
 .gallery-hero .wrapper {
   padding: 0 var(--side-p);
